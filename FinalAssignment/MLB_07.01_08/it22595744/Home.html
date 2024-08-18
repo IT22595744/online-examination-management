@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+ 
+  <style>
+    /* CSS styles for the navigation bar */
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-image: url('./Images/bg.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 10px;
+    }
+
+    .navbar img {
+      width: 80px;
+      height: 80px;
+      margin-right: 10px;
+    }
+
+    .navbar-text {
+      font-size: 20px;
+      color: #fff;
+      margin-right: 10px;
+    }
+
+    ul.navbar-list {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    ul.navbar-list li {
+      margin-right: 10px;
+    }
+
+    ul.navbar-list li a {
+      display: block;
+      color: #fff;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    ul.navbar-list li a:hover {
+      background-color: #ddd;
+      color: #333;
+    }
+
+    .edit_photo {
+      width: 50px;
+      height: 50px;
+      padding-left: 250px;
+      float: left;
+    }
+
+    .container {
+      padding: 100px 0;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 100px;
+      color: #fff;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 20px;
+    }
+
+    .footer p {
+      font-size: 14px;
+    }
+
+    .social-media-icons {
+      margin-top: 20px;
+    }
+
+    .social-media-icons a {
+      display: inline-block;
+      margin: 0 5px;
+      color: #fff;
+    }
+
+    .icon {
+      width: 24px;
+      height: 24px;
+      color: #fff;
+    }
+
+    .header-text h4 {
+      font-size: 20px;
+    }
+
+    .header-text h2 {
+      font-size: 32px;
+    }
+
+    .UL-2 {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    .UL-2 li a {
+      float: left;
+      font-size: 22px;
+    }
+
+    li a {
+      display: block;
+      padding: 10px;
+      margin: auto;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 38px;
+    }
+
+    .pic2 {
+      display: block;
+      margin-left: auto;
+      margin-right: 0;
+      width: 500px;
+    }
+
+    .pic3 {
+      display: block;
+      margin-left: auto;
+      margin-right: 0;
+      width: 300px;
+    }
+
+    .pic5 {
+      display: block;
+      margin-left: 0;
+      margin-right: auto;
+      width: 20px;
+    }
+
+    .header-elements {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 20px;
+      justify-content: space-between;
+    }
+
+    .form-elements {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .form-elements form {
+      margin-left: auto;
+    }
+
+    .nav {
+      width: 100%;
+      background-color: #03f84a;
+    }
+
+    form h3 {
+      font-size: 30px;
+    }
+
+    form h3 input {
+      padding: 10px 20px;
+    }
+
+    .submit-btn {
+      padding: 16px 80px;
+      font-size: 18px;
+      margin-left: 185px;
+      color: #49a2eb;
+    }
+
+    .footer-elements p {
+      font-size: 20px;
+    }
+
+    .footer-elements p span {
+      font-size: 35px;
+    }
+
+    footer {
+      display: flex;
+      margin-top: 50px;
+      gap: 20px;
+      align-items: flex-end;
+    }
+
+    .nav-footer li a {
+      display: block;
+      padding: 20px;
+      margin: auto;
+      background-color: #dddddd;
+      border: 2px solid #000;
+      border-top-right-radius: 20px;
+      border-top-left-radius: 20px;
+    }
+
+    .header-first {
+      display: flex;
+      gap: 20px;
+    }
+
+    .header-start {
+      display: flex;
+      align-items: center;
+    }
+
+    .header-start input {
+      padding: 10px 20px;
+    }
+
+    .hero {
+      display: flex;
+      gap: 100px;
+      justify-content: center;
+    }
+
+    .hero img,
+    .hero-text {
+      width: 33%;
+    }
+
+    .hero-profile {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    a.hero-pro-text {
+    background-color: #536172;
+    border: 2px solid #000;
+    color: #fff;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+
+    /*.hero-pro-text {
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      /*display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 10px;
+      background: #fff;
+      height: 40px;
+    }*/
+
+    .hero-text h3 {
+      font-size: 30px;
+    }
+
+    .hero-text p {
+      font-size: 20px;
+    }
+
+    .hero-pro-text-2 {
+      margin: 0 auto;
+      font-size: 100px;
+    }
+
+    .counts {
+      display: flex;
+      justify-content: space-evenly;
+    }
+
+    .count-element {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .count-element span {
+      font-size: 30px;
+      margin-top: -20px;
+    }
+
+    .future {
+      display: flex;
+      margin-top: 50px;
+      justify-content: center;
+      gap: 50PX;
+    }
+
+    .future-elements {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+
+    .future-element-text {
+      display: flex;
+      gap: 20px;
+      padding: 10px 20px;
+      border: 2px solid #fff;
+      justify-content: space-between;
+      height: 40px;
+      align-items: center;
+    }
+
+    .future-element-text button {
+      padding: 0px 40px;
+      font-size: 20px;
+    }
+
+    .hero-pro-text h3 {
+      color: #000;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="navbar">
+    <span class="navbar-text">CareerMe Exam</span>
+    <img src="Images/ci.png" alt="Company Logo">
+    <ul class="navbar-list">
+      <li><a href="../it22595744/Home.html">Home</a></li>
+      <li><a href="../it22608154/about.html">About Us</a></li>
+      <li><a href="../it22927002/Exam.html">Exams</a></li>
+      <li><a href="../it22608154/contact.html">Contact Us</a></li>
+    </ul>
+  </div>
+
+  <div class="container">
+
+    <div class="hero">
+      <img src="Images/home-img1.png" alt>
+      <div class="hero-text">
+
+        <h3>WELCOME TO CAREERME, CAREER PATH</h3>
+        <p>Lorem Ipsum is simply dummy text of the printing and
+          typesetting industry. Lorem Ipsum has been the industry's
+          standard dummy text ever since the 1500s, when an unknown
+          printer took a galley of type and scrambled it to make a
+          type specimen book. It has survived not only five centuries,
+          but also the leap into electronic typesetting, remaining
+          essentially unchanged. </p>
+      </div>
+      <div class="hero-profile">
+          <h3><a href="../it22595744/account.html"  class="hero-pro-text">Create an Account</a></h3>
+      </div>
+      <div class="hero-profile">
+          <h3><a href="../it22034540/Notifications.html" class="hero-pro-text" >Notification </a></h3>
+      </div>
+
+    </div>
+    <div class="counts">
+      <div class="count-element">
+        <h1>100+</h1>
+        <span>Employees</span>
+      </div>
+      <div class="count-element">
+        <h1>1000+</h1>
+        <span>Careers</span>
+      </div>
+      <div class="count-element">
+        <h1>500+</h1>
+        <span>Success</span>
+      </div>
+    </div>
+    <div class="future">
+      <img src="Images/future.jpeg" alt>
+      <div class="future-elements">
+        <div class="future-element-text">
+          <h3>Up Coming Events</h3>
+          <button>View</button>
+        </div>
+        <div class="future-element-text">
+          <h3>Are you looking for Carrer Guides?</h3>
+          <button>View</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    <p>&copy; 2023 CareerMe Exam. All rights reserved.</p>
+    <div class="social-media-icons">
+      <a href="#"><img src="./Images/facebook (1).png" alt="Facebook" class="icon"></a>
+      <a href="#"><img src="./Images/instagram (1).png" alt="Instagram" class="icon"></a>
+      <a href="#"><img src="./Images/twitter (1).png" alt="Twitter" class="icon"></a>
+    </div>
+  </div>
+</body>
+
+</html>

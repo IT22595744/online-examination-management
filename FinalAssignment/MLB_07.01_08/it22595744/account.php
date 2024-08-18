@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script>
+    function showAlert() {
+      // Email format validation
+      var emailInput = document.getElementById('email');
+      var email = emailInput.value;
+      var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        alert('Please enter a correct email format.');
+        emailInput.focus();
+        return false;
+      }
+      // Phone number validation
+      var phoneInput = document.getElementById('phonenumber');
+      var phoneNumber = phoneInput.value;
+      var phoneRegex = /^[0-9]+$/;
+      if (!phoneRegex.test(phoneNumber)) {
+        alert('Please enter your phone number correctly.');
+        phoneInput.focus();
+        return false;
+      }
+      // Password validation
+      var passwordInput = document.getElementById('password');
+      var password = passwordInput.value;
+      var passwordRegex = /^(?=.*[!@#$%^&*])(?=.*[0-9])(?=.*[a-zA-Z]).{8,}$/;
+      if (!passwordRegex.test(password)) {
+        alert('Please enter a password with at least 1 special character, 1 number, and a minimum of 8 characters.');
+        passwordInput.focus();
+        return false;
+      }
+    }
+  </script>
+
+  <style>
+    /* CSS styles for the navigation bar */
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-image: url('./Images/bg.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 10px;
+    }
+
+    .navbar img {
+      width: 80px;
+      height: 80px;
+      margin-right: 10px;
+    }
+
+    .navbar-text {
+      font-size: 20px;
+      color: #fff;
+      margin-right: 10px;
+    }
+
+    ul.navbar-list {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    ul.navbar-list li {
+      margin-right: 10px;
+    }
+
+    ul.navbar-list li a {
+      display: block;
+      color: #fff;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    ul.navbar-list li a:hover {
+      background-color: #ddd;
+      color: #333;
+    }
+
+    .edit_photo {
+      width: 50px;
+      height: 50px;
+      padding-left: 250px;
+      float: left;
+    }
+
+    .container {
+      padding: 100px 0;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 100px;
+      color: #fff;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 20px;
+    }
+
+    .footer p {
+      font-size: 14px;
+    }
+
+    .social-media-icons {
+      margin-top: 20px;
+    }
+
+    .social-media-icons a {
+      display: inline-block;
+      margin: 0 5px;
+      color: #fff;
+    }
+
+    .icon {
+      width: 24px;
+      height: 24px;
+      color: #fff;
+    }
+
+    .header-text h4 {
+      font-size: 20px;
+    }
+
+    .header-text h2 {
+      font-size: 32px;
+    }
+
+    .UL-2 {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    .UL-2 li a {
+      float: left;
+      font-size: 22px;
+    }
+
+    li a {
+      display: block;
+      padding: 10px;
+      margin: auto;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 38px;
+    }
+
+    .pic2 {
+      display: block;
+      margin-left: auto;
+      margin-right: 0;
+      width: 500px;
+    }
+
+    .pic3 {
+      display: block;
+      margin-left: auto;
+      margin-right: 0;
+      width: 300px;
+    }
+
+    .pic5 {
+      display: block;
+      margin-left: 0;
+      margin-right: auto;
+      width: 20px;
+    }
+
+    .header-elements {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 20px;
+      justify-content: space-between;
+    }
+
+    .form-elements {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .form-elements form {
+      margin-left: auto;
+    }
+
+    .nav {
+      width: 100%;
+      background-color: #03f84a;
+    }
+
+    form h3 {
+      font-size: 30px;
+    }
+
+    form h3 input {
+      padding: 10px 20px;
+    }
+
+    .submit-btn {
+      padding: 16px 80px;
+      font-size: 18px;
+      margin-left: 185px;
+      color: #49a2eb;
+    }
+
+    .footer-elements p {
+      font-size: 20px;
+    }
+
+    .footer-elements p span {
+      font-size: 35px;
+    }
+
+    footer {
+      display: flex;
+      margin-top: 50px;
+      gap: 20px;
+      align-items: flex-end;
+    }
+
+    .nav-footer li a {
+      display: block;
+      padding: 20px;
+      margin: auto;
+      background-color: #dddddd;
+      border: 2px solid #000;
+      border-top-right-radius: 20px;
+      border-top-left-radius: 20px;
+    }
+
+    .header-first {
+      display: flex;
+      gap: 20px;
+    }
+
+    .header-start {
+      display: flex;
+      align-items: center;
+    }
+
+    .header-start input {
+      padding: 10px 20px;
+    }
+
+    .hero {
+      display: flex;
+      gap: 100px;
+      justify-content: center;
+    }
+
+    .hero img,
+    .hero-text {
+      width: 33%;
+    }
+
+    .hero-profile {
+      width: 12%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .hero-pro-text {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 10px;
+      background: #fff;
+      height: 40px;
+    }
+
+    .hero-text h3 {
+      font-size: 30px;
+    }
+
+    .hero-text p {
+      font-size: 20px;
+    }
+
+    .hero-pro-text-2 {
+      margin: 0 auto;
+      font-size: 100px;
+    }
+
+    .counts {
+      display: flex;
+      justify-content: space-evenly;
+    }
+
+    .count-element {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .count-element span {
+      font-size: 30px;
+      margin-top: -20px;
+    }
+
+    .future {
+      display: flex;
+      margin-top: 50px;
+      justify-content: center;
+      gap: 50PX;
+    }
+
+    .future-elements {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+
+    .future-element-text {
+      display: flex;
+      gap: 20px;
+      padding: 10px 20px;
+      border: 2px solid #fff;
+      justify-content: space-between;
+      height: 40px;
+      align-items: center;
+    }
+
+    .future-element-text button {
+      padding: 0px 40px;
+      font-size: 20px;
+    }
+
+    .hero-pro-text h3 {
+      color: #000;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="navbar">
+    <span class="navbar-text">CareerMe Exam</span>
+    <img src="Images/ci.png" alt="Company Logo">
+    <ul class="navbar-list">
+    <li><a href="../it22595744/Home.html">Home</a></li>
+    <li><a href="../it22608154/about.html">About Us</a></li>
+    <li><a href="../it22927002/Exam.html">Exams</a></li>
+    <li><a href="../it22608154/contact.html">Contact Us</a></li>
+    </ul>
+  </div>
+
+  <div class="container">
+
+    <h1>Create An Account</h1>
+    <div class="form-elements">
+      <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" onsubmit="return showAlert();">
+        <h3>Full name:<input type="text" name="fullname" placeholder="Full Name" required></h3>
+        <h3>User name:<input type="text" name="username" placeholder="User Name" required></h3>
+        <h3>Phone Number:<input type="text" name="phonenumber" id="phonenumber" placeholder="0770243403" required></h3>
+        <h3>Email Address:<input type="email" name="email" id="email" placeholder="xyz@gmail.com" required></h3>
+        <h3>Enter Password:<input type="password" name="password" id="password" placeholder="Enter password" required></h3>
+        <input type="submit" value="SUBMIT" class="submit-btn">
+      </form>
+      <div id=“message” class="message">
+        <h3>Password must contain the following:</h3>
+        <p id=“Special” class=“invalid”>A <b>special character</b> </p>
+
+        <p id=“number” class=“invalid”>A <b>number</b></p>
+
+        <p id=“length” class=“invalid”>Minimum <b>8 characters</b></p>
+
+      </div>
+
+      <img src="Images/careerme.2.avif" id="pic2" class="pic2">
+
+    </div>
+
+  </div>
+
+  <div class="footer">
+    <p>&copy; 2023 CareerMe Exam. All rights reserved.</p>
+    <div class="social-media-icons">
+      <a href="#"><img src="./Images/facebook (1).png" alt="Facebook" class="icon"></a>
+      <a href="#"><img src="./Images/instagram (1).png" alt="Instagram" class="icon"></a>
+      <a href="#"><img src="./Images/twitter (1).png" alt="Twitter" class="icon"></a>
+    </div>
+  </div>
+  <?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        // Establish database connection
+        $servername = "localhost";
+        $username = "root";
+        $password = ""; // If you have set a password for MySQL, enter it here
+        $dbname = "arshad";
+        $conn = new mysqli($servername, $username, $password, $dbname);
+
+        // Check connection
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+        }
+
+        // Create the "usr_info" table if it doesn't exist
+        $createTableSql = "CREATE TABLE IF NOT EXISTS usr_info (
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            fullname VARCHAR(255) NOT NULL,
+            username VARCHAR(255) NOT NULL,
+            phonenumber VARCHAR(20) NOT NULL,
+            email VARCHAR(255) NOT NULL,
+            password VARCHAR(255) NOT NULL
+        )";
+        if ($conn->query($createTableSql) === FALSE) {
+            echo "Error creating table: " . $conn->error;
+        }
+
+        // Retrieve form data
+        $fullname = $_POST["fullname"];
+        $username = $_POST["username"];
+        $phonenumber = $_POST["phonenumber"];
+        $email = $_POST["email"];
+        $password = $_POST["password"];
+
+        // Prepare and execute the SQL query
+        $insertSql = "INSERT INTO usr_info (fullname, username, phonenumber, email, password) VALUES ('$fullname', '$username', '$phonenumber', '$email', '$password')";
+        if ($conn->query($insertSql) === TRUE) {
+            echo "<script>alert('Your Information has been saved.');</script>";
+        } else {
+            echo "Error: " . $insertSql . "<br>" . $conn->error;
+        }
+
+        // Close the database connection
+        $conn->close();
+    }
+    ?>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/64b267a712.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+            <div class="navbar">
+                <span class="navbar-text">CareerMe Exam</span>
+                <img src="./imgs/ci.png" alt="Company Logo">
+                <ul class="navbar-list">
+                    <li><a href="../it22595744/Home.html">Home</a></li>
+                    <li><a href="../it22608154/about.html">About Us</a></li>
+                    <li><a href="../it22927002/Exam.html">Exams</a></li>
+                    <li><a href="../it22608154/contact.html">Contact Us</a></li>
+                </ul>
+                <div class="search">
+                    <input class="srch", type="search" name="", placeholder="Type to text">
+                    <a href="#"><button class="btn" >search</button></a>
+                </div>
+            </div>
+
+            <div class="content">
+                <div class="form">
+                    <h2>Login</h2>
+                     <form action="../it22595744/Home.html" method="POST" onsubmit="return validate()" name="form1">
+                        <input type="email", name="email", id="email", placeholder="email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
+                        <div autocomplete="off" id="email_error">Please fill up your email</div>
+                        <input type="password", name="password", id="password" , placeholder="password" id="password">
+                        <div id="password_error">Please fill up your password</div>
+                        <i class="fa-solid fa-eye" id="eye" style="margin-left: -30px; cursor: pointer;"></i>
+                        <div class="fp">
+                            <a href="register.php">Forget password?</a>
+                        </div>
+                        <a href="">
+                            <input type="submit" value="Login" class="btnn" id="btnn">
+                        </a>
+                    </form>
+                    <p class="link">Don't have an account<br>
+                    <a href="register.php">Sign up </a> here</a></p>
+                </div>
+
+                <div class="footer">
+                        <p>&copy; 2023 CareerMe Exam. All rights reserved.</p>
+                        <div class="social-media-icons">
+                                <a href="#"><img src="./imgs/facebook (1).png" alt="Facebook" class="icon"></a>
+                                <a href="#"><img src="./imgs/instagram (1).png" alt="Facebook" class="icon"></a>
+                                <a href="#"><img src="./imgs/twitter (1).png" alt="Facebook" class="icon"></a>
+                        </div>
+                </div>
+            </div>
+            <script src="./Login.js"></script>
+            <script src="./Password.js"></script>
+    </body>
+</html>
